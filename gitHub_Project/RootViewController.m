@@ -26,7 +26,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [btn setFrame:CGRectMake(20, 20, 40, 40)];
+    [btn setTitle:@"A" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 	// Do any additional setup after loading the view.
+}
+
+- (void)btnAction:(id)sender
+{
+    NSLog(@"hello");
 }
 
 - (void)didReceiveMemoryWarning
